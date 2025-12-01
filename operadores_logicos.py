@@ -27,3 +27,15 @@ not ""
 print(not "")
 # Retorna true, porque uma string vazia é considerada falsa em um contexto booleano.
 
+# Testando operadores de identidade.
+print(saldo is not limite_saque)
+novo_saldo = saldo
+print(saldo is novo_saldo)
+
+# Testando operadores de associação.
+curso = "Curso de Python"
+frutas = ["laranja", "uva", "limão"]
+saques = [1500, 100]
+print("Python" in curso)
+print("maçã" not in frutas)
+print(500 in saques)

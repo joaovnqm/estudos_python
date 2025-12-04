@@ -39,7 +39,7 @@ exemplo_pessoa_1 = pessoa.copy()
 exemplo_pessoa_1.clear()
 
 # dict.fromkeys() - Cria um novo dicionário com chaves de um iterável e valores padrão.
-exemplo_pessoa_2 =dict.fromkeys(["nome", "idade", "cidade"]) # Valores padrão são None.
+exemplo_pessoa_2 = dict.fromkeys(["nome", "idade", "cidade"]) # Valores padrão são None.
 print(exemplo_pessoa_2)  # Resultado: {'nome': None, 'idade': None, 'cidade': None}
 exemplo_pessoa_3 = dict.fromkeys(["nome", "idade", "cidade"], "Desconhecido") # Valores padrão são "Desconhecido".
 print(exemplo_pessoa_3)  # Resultado: {'nome': 'Desconhecido', 'idade': 'Desconhecido', 'cidade': 'Desconhecido'}

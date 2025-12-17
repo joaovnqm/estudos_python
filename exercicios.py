@@ -19,3 +19,12 @@ def par_ou_impar(numero):
     
 valor = input("Insira o número:")
 par_ou_impar(int(valor))
+
+# Exercício de Cálculo de IMC
+nome = "João Victor"
+altura = 1.86
+peso = 74
+imc = peso / altura ** 2
+
+# A seguinte string é uma f-string, pode incluir variáveis dentro dela através do uso das chaves.
+print(f"O indivíduo de nome: {nome}, de altura: {altura} e de peso: {peso}, tem um IMC de: {imc:.2f}")

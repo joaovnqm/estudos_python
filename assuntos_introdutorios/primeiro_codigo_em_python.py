@@ -14,3 +14,9 @@ print(f"Olá, meu nome é {NOME} e eu tenho {str(idade_usuario)} anos. Eu moro e
 
 # Exibindo o tipo da variável do NOME.
 print(type(NOME))
+
+# Usando o .format()
+a = 1
+b = 2
+c = 3
+print("{} + {} + {} = 6".format(a, b, c))

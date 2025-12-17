@@ -58,3 +58,7 @@ print(nome_completo[0:-1])
 print(f"""Olá, meu nome é {nome}.
 Tenho {idade} anos
 Estou aprendendo {linguagem}.""")
+
+# Tipos de variáveis 'int' e 'float'
+meu_saldo_bancario = float(1583.25) # Esse é um valor com ponto flutuante.
+minha_idade = int(30) # Esse é um valor que está sendo salvo como inteiro.

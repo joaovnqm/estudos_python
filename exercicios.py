@@ -49,7 +49,7 @@ else:
 nome_usuario = input("Por favor, digite o seu nome: ")
 idade_usuario = input("Por favor, digite a sua idade: ")
 
-if (nome_usuario and idade_usuario) != None:
+if nome_usuario and idade_usuario:
     print(f"Seu nome é: {nome_usuario}")
     print(f"Seu nome invertido é: {nome_usuario[::-1]}")
     if " " in nome_usuario:

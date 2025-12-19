@@ -44,3 +44,20 @@ elif primeiro_valor == segundo_valor:
 
 else:
     print("Um ou os dois valores inseridos são inválidos.")
+
+# Exercício de formatação e fatiamento de Strings.
+nome_usuario = input("Por favor, digite o seu nome: ")
+idade_usuario = input("Por favor, digite a sua idade: ")
+
+if (nome_usuario and idade_usuario) != None:
+    print(f"Seu nome é: {nome_usuario}")
+    print(f"Seu nome invertido é: {nome_usuario[::-1]}")
+    if " " in nome_usuario:
+        print("O seu nome contém espaço(s)")
+    else:
+        print("O seu nome não contém espaços.")
+    print(f"O seu nome contém {len(nome_usuario)} letras e espaços.")
+    print(f"A primeira letra do seu nome é: {nome_usuario[0]}")
+    print(f"A última letra do seu nome é: {nome_usuario[-1]}")
+else:
+    print("Desculpe, você deixou um ou os dois campos vazios.")

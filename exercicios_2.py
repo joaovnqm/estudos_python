@@ -39,4 +39,4 @@ if len(nome_usuario) <= 4:
 elif len(nome_usuario) <= 6:
     print("O seu nome é normal.")
 else:
-    print("O seu nome é muito grande.")
+    print("O seu nome é muito grande, uau!")

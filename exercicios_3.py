@@ -21,3 +21,36 @@ print(f"O nome escrito é: {nome}")
 while indice < comprimento_nome:
     print(f"*", nome[indice], sep="", end="")
     indice += 1
+print()
+
+# Desenvolvendo uma calculadora com as 4 operações básicas.
+while True:
+    valor_1 = input("Digite o primeiro valor: ")
+    valor_2 = input("Digite o segundo valor: ")
+    valor_1 = float(valor_1)
+    valor_2 = float(valor_2)
+
+    try:
+        operacao = input("Digite a operação desejada: ")
+        if operacao == "+":
+            print("O resultado é:", valor_1 + valor_2)
+        
+        elif operacao == "-":
+            print("O resultado é:", valor_1 - valor_2)
+        
+        elif operacao == "*":
+            print("O resultado é:", valor_1 * valor_2)
+
+        elif operacao == "/":
+            print("O resultado é:", valor_1 + valor_2)
+        
+        else:
+            print("Hmmm... Acho que você inseriu uma operação inválida.")
+    
+    except:
+        print("Hmmm... Acho que você digitou algum número inválido.")
+    
+    sair = input("Você deseja [s]air?").lower().startswith("s")
+    if sair:
+        print("Programa finalizado, obrigado!")
+        break

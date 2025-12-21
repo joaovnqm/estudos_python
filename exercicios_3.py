@@ -12,3 +12,12 @@ while linha <= 10:
     linha += 1
     print("", end="\n")
     coluna = 1
+
+# Realizando outro exercício de laços de repetição. (Iterando os caracteres de um nome)
+nome = "João Victor"
+comprimento_nome = len(nome)
+indice = 0
+print(f"O nome escrito é: {nome}")
+while indice < comprimento_nome:
+    print(f"*", nome[indice], sep="", end="")
+    indice += 1

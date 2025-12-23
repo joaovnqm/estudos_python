@@ -36,19 +36,22 @@ lista_compras = []
 while True:
     opcao = input("Selecione uma opção: [I]nserir [A]pagar [L]istar ")
 
-    if opcao == "I" or "i":
+    if opcao == "I" or opcao == "i":
         os.system('cls')
         exibir_lista(lista_compras)
         nome_produto = input("Digite o nome do produto que você deseja inserir na lista de compras: ")   
         lista_compras.append(nome_produto)
     
-    elif opcao == "A" or "a":
-        os.system('cls')
-        exibir_lista(lista_compras)
-        nome_produto = input("Digite o nome do produto que você deseja apagar da lista de compras: ")
-        lista_compras.remove(nome_produto)
+    elif opcao == "A" or opcao == "a":
+        try:
+            os.system('cls')
+            exibir_lista(lista_compras)
+            indice_produto = int(input("Digite o índice do produto que você deseja apagar da lista de compras: "))
+            lista_compras.pop(indice_produto)
+        except:
+            print("Oops, o índice que você digitou não existe. Por favor, tente novamente.")
 
-    elif opcao == "L" or "l":
+    elif opcao == "L" or opcao == "l":
         os.system('cls')
         exibir_lista(lista_compras)
     else:

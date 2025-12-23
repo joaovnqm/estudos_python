@@ -52,7 +52,7 @@ while True:
 
         except IndexError:
             print("Oops, o índice que você digitou não existe. Por favor, tente novamente.")
-            
+
         except TypeError:
             print("Oops, por favor, insira um valor inteiro.")
 
@@ -63,4 +63,4 @@ while True:
         os.system('cls')
         exibir_lista(lista_compras)
     else:
-        print("Desculpe, você inseriu um caracterer incorreto, tente novamente.")
+        print("Desculpe, você inseriu um caractere incorreto, tente novamente.")

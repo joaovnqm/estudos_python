@@ -49,11 +49,13 @@ while True:
             indice_produto = int(input("Digite o índice do produto que você deseja apagar da lista de compras: "))
             lista_compras.pop(indice_produto)
             # Ou então: del lista_compras[indice_produto]
-            
+
         except IndexError:
             print("Oops, o índice que você digitou não existe. Por favor, tente novamente.")
+            
         except TypeError:
             print("Oops, por favor, insira um valor inteiro.")
+
         except Exception:
             print("Oops, erro desconhecido.")
 

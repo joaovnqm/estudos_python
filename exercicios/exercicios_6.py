@@ -34,13 +34,9 @@ for digito in cpf_modificado:
     soma += (int(digito) * valor_regressivo)
     valor_regressivo -= 1
 
-resto_operacao_primeiro_digito = (soma * 10) % 11
+primeiro_digito_verificador = (soma * 10) % 11
 
-if resto_operacao_primeiro_digito > 9:
-    primeiro_digito_verificador = 0
-    
-else:
-    primeiro_digito_verificador = resto_operacao_primeiro_digito
+digito = digito if digito <= 9 else 0
 
 print(primeiro_digito_verificador)
 print(cpf_modificado)

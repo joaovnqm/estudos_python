@@ -21,8 +21,8 @@ frases_unidas = '-'.join(lista_palavras_2_modificada)
 print(frases_unidas)
 
 # Exercício da aula 99. Gerando o primeiro dígito de um CPF.
-cpf_puro = input("Por favor, digite o número do CPF: ")
-conjuntos_numeros_cpf = cpf_puro.replace("-", ".").split(".")
+cpf_fornecido = input("Por favor, digite o número do CPF: ")
+conjuntos_numeros_cpf = cpf_fornecido.replace("-", ".").split(".")
 cpf_modificado = ""
 soma = 0
 valor_regressivo = 10
@@ -38,3 +38,22 @@ primeiro_digito_verificador = (soma * 10) % 11
 primeiro_digito_verificador = primeiro_digito_verificador if primeiro_digito_verificador <= 9 else 0
 
 print(primeiro_digito_verificador)
+
+resultado_1 = cpf_modificado + str(primeiro_digito_verificador)
+
+# Exercício da aula 101. Gerando o segundo dígito de um CPF. (Utilizando os dados do exercício anterior.)
+novo_valor_regressivo = 11
+nova_soma = 0
+for digito in resultado_1:
+    nova_soma += (int(digito) * novo_valor_regressivo)
+    novo_valor_regressivo -= 1
+
+segundo_digito_verificador = (nova_soma * 10) % 11
+
+segundo_digito_verificador = segundo_digito_verificador if segundo_digito_verificador <= 9 else 0
+
+print(segundo_digito_verificador)
+
+resultado_2 = resultado_1 + str(segundo_digito_verificador)
+
+print(f"O CPF completo retornado é: {resultado_2} logo o número fornecido é de um CPF válido.")

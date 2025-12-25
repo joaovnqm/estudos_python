@@ -26,7 +26,6 @@ conjuntos_numeros_cpf = cpf_puro.replace("-", ".").split(".")
 cpf_modificado = ""
 soma = 0
 valor_regressivo = 10
-print(conjuntos_numeros_cpf)
 for trinca in conjuntos_numeros_cpf[:3]:
     cpf_modificado += trinca
 
@@ -36,7 +35,6 @@ for digito in cpf_modificado:
 
 primeiro_digito_verificador = (soma * 10) % 11
 
-digito = digito if digito <= 9 else 0
+primeiro_digito_verificador = primeiro_digito_verificador if primeiro_digito_verificador <= 9 else 0
 
 print(primeiro_digito_verificador)
-print(cpf_modificado)

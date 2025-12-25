@@ -33,13 +33,13 @@ for digito in cpf_modificado:
     soma += (int(digito) * valor_regressivo)
     valor_regressivo -= 1
 
-primeiro_digito_verificador = (soma * 10) % 11
+primeiro_digito = (soma * 10) % 11
 
-primeiro_digito_verificador = primeiro_digito_verificador if primeiro_digito_verificador <= 9 else 0
+primeiro_digito = primeiro_digito if primeiro_digito <= 9 else 0
 
-print(primeiro_digito_verificador)
+print(primeiro_digito)
 
-resultado_1 = cpf_modificado + str(primeiro_digito_verificador)
+resultado_1 = cpf_modificado + str(primeiro_digito)
 
 # Exercício da aula 101. Gerando o segundo dígito de um CPF. (Utilizando os dados do exercício anterior.)
 novo_valor_regressivo = 11
@@ -48,12 +48,12 @@ for digito in resultado_1:
     nova_soma += (int(digito) * novo_valor_regressivo)
     novo_valor_regressivo -= 1
 
-segundo_digito_verificador = (nova_soma * 10) % 11
+segundo_digito = (nova_soma * 10) % 11
 
-segundo_digito_verificador = segundo_digito_verificador if segundo_digito_verificador <= 9 else 0
+segundo_digito = segundo_digito if segundo_digito <= 9 else 0
 
-print(segundo_digito_verificador)
+print(segundo_digito)
 
-resultado_2 = resultado_1 + str(segundo_digito_verificador)
+resultado_2 = resultado_1 + str(segundo_digito)
 
 print(f"O CPF completo retornado é: {resultado_2} logo o número fornecido é de um CPF válido.")

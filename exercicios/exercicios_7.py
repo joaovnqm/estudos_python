@@ -9,8 +9,7 @@ def multiplicar(*args):
 def par_ou_impar(numero):
     if numero % 2 == 0:
         return "par"
-    else:
-        return "ímpar"
+    return "ímpar"
 
 # Testando a função:
 numeros = 2, 3, 4, 5

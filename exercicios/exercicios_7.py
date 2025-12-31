@@ -17,7 +17,7 @@ resultado = multiplicar(*numeros)
 print(f"Os números fornecidos são: {numeros}. O resultado de sua multiplicação é: {resultado}, que é um número {par_ou_impar(resultado)}")
 
 # Realizando outro exercício:
-# Função que duplica, triplica e quadruplica um número.
+# Função que duplica, triplica e quadruplica um número utilizando closures.
 def criar_multiplicador(multiplicador):
     def multiplicar_numero(numero):
         return numero * multiplicador

@@ -19,17 +19,13 @@ lista_de_listas_de_inteiros = [
 
 def primeiro_duplicado(lista_de_argumentos):
     for lista in lista_de_argumentos:
-        valores_unicos = set(lista)
-        repeticoes = dict.fromkeys(valores_unicos, 0)
-        ciclos = 0
+        numeros_vistos = set()
         for valor in lista:
-            ciclos += 1
-            repeticoes[valor] += 1
-            if repeticoes[valor] > 1:
+            if valor in numeros_vistos:
                 print(f"O número {valor} foi o primeiro a se repetir.")
                 break
-            elif ciclos == len(valores_unicos):
-                print("Não há números repetidos na lista. Retorno: -1")
-                break
-        
+            numeros_vistos.add(valor)
+        else:
+            print("Não há números repetidos na lista. Retorno: -1")  
+
 primeiro_duplicado(lista_de_listas_de_inteiros)

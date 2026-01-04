@@ -29,3 +29,21 @@ def primeiro_duplicado(lista_de_argumentos):
             print("Não há números repetidos na lista. Retorno: -1")  
 
 primeiro_duplicado(lista_de_listas_de_inteiros)
+
+# Exercício utilizando função lambda para ordenar uma lista.
+
+dicionario_nomes_idades = [
+    {"nome": "Ana", "idade" : 25},
+    {"nome": "Bruno", "idade" : 20},
+    {"nome": "Carla", "idade" : 30},
+    {"nome": "Daniel", "idade" : 22},
+    {"nome": "Eva", "idade" : 28}
+]
+
+dicionario_nomes_idades.sort(key=lambda item: item["nome"]) # Ordena pelo nome (chave do dicionário)
+for item in dicionario_nomes_idades:
+    print(item)
+
+dicionario_nomes_idades.sort(key=lambda item: item["idade"]) # Ordena pela idade (valor do dicionário)
+for item in dicionario_nomes_idades:
+    print(item)

@@ -47,3 +47,13 @@ for item in dicionario_nomes_idades:
 dicionario_nomes_idades.sort(key=lambda item: item["idade"]) # Ordena pela idade (valor do dicionário)
 for item in dicionario_nomes_idades:
     print(item)
+
+# Exercício utilizando lambda e **kwargs para calcular a área de um triângulo.
+def calcular_area_triangulo(**kwargs):
+    base = kwargs.get("base", 0)
+    altura = kwargs.get("altura", 0)
+    area = lambda b, h: (b * h) / 2
+    return area(base, altura)
+
+area_1 = calcular_area_triangulo(base = 10, altura = 5)
+print(area_1)

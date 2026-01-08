@@ -11,3 +11,12 @@ print(lista)
 # "x" são as chaves e "y" são os valores.
 dicionario = {x: x ** 3 for x in range(1, 11)}
 print(dicionario)
+
+# Exercício de set comprehension.
+# Criar um conjunto (set) com as letras únicas de uma frase, ignorando espaços.
+frase = "Frase de exemplo do exercício de set comprehension."
+set = {x for x in frase if x != " "}
+print(set)
+# A letra maiúscula e o acento são considerados caracteres diferentes de acordo com a tabela Unicode,
+# por isso, aparecem dois "i"s, um com o acento agudo e outro sem acento. Poderia acontecer o mesmo caso
+# existisse uma letra "f" minúscula na frase.

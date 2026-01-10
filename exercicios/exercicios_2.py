@@ -2,7 +2,7 @@
 try:
     numero_dobro = input("Insira um número qualquer e veja o seu dobro: ")
     print(f"O dobro do número {numero_dobro} é: {float(numero_dobro) * 2}")
-except:
+except ValueError, TypeError:
     print("O que você digitou não é um número e contém algum caractere não esperado como letras ou espaços. " \
     "Por favor, analise e tente novamente.")
 
@@ -15,7 +15,7 @@ try:
     elif int(numero_inteiro) % 2 != 0:
         print(f"O número: {numero_inteiro} é ímpar.")
         
-except:
+except ValueError, TypeError:
     print("O valor digitado não é um valor inteiro. Por favor, tente novamente.")
 
 # Exercício 2 da Aula 55 do Curso do Luiz Otávio Miranda.
@@ -29,7 +29,7 @@ try:
         print("Boa noite.")
     else:
         print("Hora inválida.")
-except:
+except ValueError, TypeError:
     print("O valor digitado não é um valor inteiro. Por favor, tente novamente.")
 
 # Exercício 3 da Aula 55 do Curso do Luiz Otávio Miranda.

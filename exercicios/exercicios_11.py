@@ -38,7 +38,6 @@ def criar_funcao(funcao, x):
         return funcao(x, y)
     return funcao_interna
 
-
 soma_com_cinco = criar_funcao(soma, 5)
 multiplica_por_dez = criar_funcao(multiplica, 10)
 

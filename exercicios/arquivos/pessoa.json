@@ -1,0 +1,17 @@
+{
+  "name": "João",
+  "age": 22,
+  "nationality": "Brazilian",
+  "state": "Pernambuco",
+  "city": "Recife",
+  "addresses": [
+    {
+      "address 1": "Rua dos Limões"
+    },
+    {
+      "address 2": "Número 8"
+    }
+  ],
+  "height": 1.85,
+  "is_developer": true
+}

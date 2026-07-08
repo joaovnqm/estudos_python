@@ -20,6 +20,7 @@ def escrever_tarefa(tarefa):
         json.dump(tarefas, arquivo, ensure_ascii=False, indent=2)
 
     tarefas_adicionadas.append(tarefa)
+    listar_tarefas()
 
 def desfazer_tarefa():
     if tarefas_adicionadas is not None:
@@ -32,6 +33,8 @@ def desfazer_tarefa():
 
             with open(caminho_json, "w", encoding="utf8") as arquivo:
                 json.dump(tarefas, arquivo, ensure_ascii=False, indent=2)
+            
+            listar_tarefas()
 
         except:
             return "Não há tarefas para desfazer."
@@ -50,6 +53,7 @@ def refazer_tarefa():
             json.dump(tarefas, arquivo, ensure_ascii=False, indent=2)
 
         tarefas_adicionadas.append(tarefa)
+        listar_tarefas()
 
     except:
         return "Não há tarefas para refazer."
@@ -61,7 +65,7 @@ def listar_tarefas():
     print(*tarefas, sep=", ")
 
 while True:
-    tarefa = input("Escreva se deseja 'desfazer' ou 'refazer' alguma ação. Ou escreva o nome da tarefa a ser adicionada: ").strip().lower()
+    tarefa = input("Escreva se deseja 'desfazer' ou 'refazer' alguma ação, além de 'listar' para listar as tarefas existentes. Ou escreva o nome da tarefa a ser adicionada: ").strip().lower()
     if tarefa == "desfazer":
         retorno = desfazer_tarefa()
         if retorno is not None:
@@ -72,8 +76,13 @@ while True:
         if retorno is not None:
             print(retorno)
 
+    elif tarefa == "listar":
+        listar_tarefas()
+
+    elif tarefa == "":
+        print("Você não digitou nada, por fazer tente novamente.")
+
     else:
         escrever_tarefa(tarefa)
     
-    listar_tarefas()
     print()

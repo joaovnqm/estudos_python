@@ -61,8 +61,7 @@ def listar_tarefas():
     print(*tarefas, sep=", ")
 
 while True:
-    tarefa = input("Escreva se deseja 'desfazer' ou 'refazer' alguma ação. Ou escreva o nome da tarefa a ser adicionada: ")
-    tarefa.strip().lower()
+    tarefa = input("Escreva se deseja 'desfazer' ou 'refazer' alguma ação. Ou escreva o nome da tarefa a ser adicionada: ").strip().lower()
     if tarefa == "desfazer":
         retorno = desfazer_tarefa()
         if retorno is not None:

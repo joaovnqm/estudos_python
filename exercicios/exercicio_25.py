@@ -2,7 +2,7 @@
 # Criando uma classe de um sistema hipotético de cadastro
 class Usuario:
     def __init__(self, nome, username, email):
-        self.nome = nome
+        self._nome = nome
         self.username = username
         self.email = email
     
@@ -17,10 +17,18 @@ class Usuario:
     # Usando uma property como um getter
     @property
     def nome(self):
-        return self.nome
+        return self._nome
+    
+    # Usando uma property como um setter
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
 
 usuario_1 = Usuario("João", "joao.macedo97", "email@exemplo.com")
 usuario_2 = Usuario.usuario_anonimo("OAnonimo", "anonimo@exemplo.com")
 
 print(usuario_1.nome, usuario_1.bem_vindo())
 print(usuario_2.nome, usuario_2.bem_vindo())
+
+usuario_1.nome = "João Victor"
+print(usuario_1.nome)

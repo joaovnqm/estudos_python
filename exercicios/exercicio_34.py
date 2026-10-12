@@ -40,7 +40,7 @@ class Historico_Navegacao:
         print("Você está na página: ", self.url_atual)
 
     def limpar_tela(self):
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system("cls" if os.name == "nt" else "clear")
 
     def main():
         navegador = Historico_Navegacao("google.com")
@@ -55,22 +55,22 @@ class Historico_Navegacao:
 
         while True:
             comando = input("Digite um comando: ").strip().lower()
-            if comando == 'sair':
+            if comando == "sair":
                 print("Fechando o navegador...")
                 break
 
-            elif comando == 'voltar':
+            elif comando == "voltar":
                 navegador.voltar()
                 navegador.limpar_tela()
                 print(instrucoes)
 
-            elif comando == 'avançar':
+            elif comando == "avançar":
                 navegador.avancar()
                 navegador.limpar_tela()
                 print(instrucoes)
 
-            elif comando.startswith('visitar '):
-                nova_url = comando.split(' ', 1)[1]
+            elif comando.startswith("visitar "):
+                nova_url = comando.split(" ", 1)[1]
                 navegador.visitar_pagina(nova_url)
                 navegador.limpar_tela()
                 print(instrucoes)

@@ -1,0 +1,2 @@
+Success: iPhone 16e está ligado. (Smartphone)
+Error: Galaxy S20+ está ligado. (Smartphone)

@@ -9,6 +9,15 @@ def adiciona_repr(cls):
     cls.__repr__ = meu_repr
     return cls
 
+def minha_cidade(metodo):
+    def interno(self, *args, **kwargs):
+        resultado = metodo(self, *args, **kwargs)
+        if 'Recife' in resultado:
+            return 'Você está em casa.'
+
+        return resultado
+    
+    return interno
 @adiciona_repr
 class Time:
     def __init__(self, nome):
@@ -19,6 +28,10 @@ class Cidade:
     def __init__(self, nome):
         self.nome = nome
 
+    @minha_cidade
+    def falar_nome(self):
+        return f'O nome da cidade é: {self.nome}'
+
 brasil = Time('Brasil')
 argentina = Time('Argentina')
 recife = Cidade('Recife')
@@ -28,3 +41,6 @@ print(brasil)
 print(argentina)
 print(recife)
 print(sao_paulo)
+
+print(recife.falar_nome())
+print(sao_paulo.falar_nome())
